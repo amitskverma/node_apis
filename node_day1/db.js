@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 // define the mongoDB URL
-const mongoURL = 'mongodb://localhost:27017/test_DB';
+const mongoURL = process.env.DB_CONNECTION_STRING;
 
 
 // connect to the mongoDB database
@@ -10,7 +12,7 @@ mongoose.connect(mongoURL);
  const db = mongoose.connection;
 
  db.on('connected', () => {
-     console.log('Connected to the database');
+     console.log('Connected to the database to online cluster');
  }  );  
 
  db.on('error', (error) => {
