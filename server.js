@@ -13,5 +13,6 @@ app.use(bodyParser.json())
 const personRoutes = require('./router/personRoutes')
 
 
-app.use('/person', personRoutes)
-app.listen(process.env.PORT || 3000, () => console.log('Server is running on port 3000'));
+app.use('/', personRoutes)
+app.listen(process.env.PORT || 3000, 
+() => console.log('Server is running on port 3000'));
