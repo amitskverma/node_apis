@@ -1,11 +1,11 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const PersonController = require('../controller/personController');
+import { create, get, getbyid, edit, deletePerson } from '../controller/personController.js';
 
-router.post("/create", PersonController.create);
-router.get("/get", PersonController.get);
-router.get("/getbyid/:id", PersonController.getbyid);
-router.put("/edit/:id", PersonController.edit);
-router.delete("/delete/:id",PersonController.delete);
+router.post("/create", create);
+router.get("/get", get);
+router.get("/getbyid/:id", getbyid);
+router.put("/edit/:id", edit);
+router.delete("/delete/:id", deletePerson );
 
-module.exports = router;   
+export {router}; 

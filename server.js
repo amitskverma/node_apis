@@ -1,16 +1,19 @@
-const express = require('express');
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import dotenv from 'dotenv';
+import { router } from './router/personRoutes.js';
+import './db.js';
+
+dotenv.config();
+
 const app = express();
-const db = require('./db'); // Assuming you use this module
-const cors = require('cors');
-require('dotenv').config();
 app.use(cors());
+app.use(bodyParser.json());
 
-const bodyParser = require('body-parser')
-app.use(bodyParser.json())  
+app.use('/', router);
 
-const personRoutes = require('./router/personRoutes');
-app.use('/', personRoutes); 
-
-app.listen(process.env.PORT || 3000, () => { 
-  console.log(`Server is running on port ${process.env.PORT || 3000}`); 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
