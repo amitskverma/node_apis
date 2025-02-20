@@ -1,11 +1,11 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 import { router } from './router/personRoutes.js';
 import './db.js';
 
-dotenv.config();
+//dotenv.config();
 
 const app = express();
 app.use(cors());
