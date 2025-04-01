@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "api-creation",
   "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "amit",
   "license": "ISC",
   "dependencies": {
