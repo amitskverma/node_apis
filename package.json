@@ -4,11 +4,14 @@
   "description": "api-creation",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "glump"
   },
   "author": "amit",
   "license": "ISC",
   "dependencies": {
+    "bower": "^1.7.9",
+  "grunt": "^1.0.1",
+  "gulp": "^3.9.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
