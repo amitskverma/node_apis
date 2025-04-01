@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "api-creation",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "author": "amit",
   "license": "ISC",
   "dependencies": {
