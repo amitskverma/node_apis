@@ -11,17 +11,7 @@ app.use(bodyParser.json())
 const personRoutes = require('./router/personRoutes');
 app.use('/', personRoutes); 
 
-app.listen(process.env.PORT || 3000, () => { 
-  console.log(`Server is running on port ${process.env.PORT || 3000}`); 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
-// const express = require('express');
-// const app = express();
-
-// app.get('/', (req, res) => {
-//     res.send('Hello, Node.js app is running!');
-// });
-
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
