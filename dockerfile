@@ -20,4 +20,4 @@ RUN npm run build --if-present
 EXPOSE 8080
 
 # Start the app
-CMD ["node", "bin/www"]
+CMD ["npm", "start"]
